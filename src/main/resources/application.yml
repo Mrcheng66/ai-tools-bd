@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ai-tools?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: chqq2025
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ching.aitools.entity
+mu-batis-plus:
+  global-config:
+    db-config:
+      id-type: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
