@@ -9,7 +9,7 @@ COPY src ./src
 COPY pom.xml .
 
 # Build the project and create the executable JAR
-RUN mvn clean install -DskipTests
+RUN mvn package -DskipTests
 
 # Expose port 8080
 EXPOSE 8080
